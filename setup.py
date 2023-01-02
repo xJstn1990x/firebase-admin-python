@@ -28,7 +28,8 @@ if major != 3 or minor < 7:
 
 # Read in the package metadata per recommendations from:
 # https://packaging.python.org/guides/single-sourcing-package-version/
-about_path = path.join(path.dirname(path.abspath(__file__)), 'firebase_admin', '__about__.py')
+about_path = path.join(path.dirname(path.abspath(
+    __file__)), 'firebase_admin', '__about__.py')
 about = {}
 with open(about_path) as fp:
     exec(fp.read(), about)  # pylint: disable=exec-used
